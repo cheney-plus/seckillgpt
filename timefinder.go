@@ -452,6 +452,10 @@ func checkTimeValid(word string) (rsl string) {
 	return replacedWord
 }
 
+func NewDefault() *TimeFinder {
+	return New("../jieba_dict.txt", "../dictionary.txt")
+}
+
 // New 初始化
 func New(fileNames ...string) *TimeFinder {
 	finder := new(TimeFinder)
